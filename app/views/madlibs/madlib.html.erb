@@ -1,0 +1,24 @@
+<h1>Madlibbing madlib</h1>
+
+<%= form_with do |form| %>
+  <% @blanks.each_with_index do |blank, index| %>
+    <div style="color: red">
+      <h2><%= blank %> </h2>
+      <%= form.text_field index %>
+      
+    </div>
+  <% end %>
+
+  
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "Show this madlib", @madlib %> |
+  <%= link_to "Back to madlibs", madlibs_path %>
+</div>

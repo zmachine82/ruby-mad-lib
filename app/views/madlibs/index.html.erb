@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Madlibs</h1>
+
+<div id="madlibs">
+  <% @madlibs.each do |madlib| %>
+    <%= render madlib %>
+    <p>
+      <%= link_to "Show this madlib", lib_path(madlib) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New madlib", new_madlib_path %>

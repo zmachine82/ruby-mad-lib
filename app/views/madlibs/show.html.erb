@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @madlib %>
+
+<div>
+  <%= link_to "Edit this madlib", edit_madlib_path(@madlib) %> |
+  <%= link_to "Back to madlibs", madlibs_path %>
+
+  <%= button_to "Destroy this madlib", @madlib, method: :delete %>
+</div>
